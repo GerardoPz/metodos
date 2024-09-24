@@ -54,7 +54,7 @@ function mostrarResultados(iteraciones, raiz) {
   ctx.font = "14px Arial";
 
   // Encabezados de la tabla
-  const encabezados = ["Iteración", "x0", "x1", "f(x0)"];
+  const encabezados = ["Iteración", "x0", "x1"];
   encabezados.forEach((encabezado, index) => {
       ctx.fillText(encabezado, 50 + index * 100, 50);
   });
@@ -64,7 +64,6 @@ function mostrarResultados(iteraciones, raiz) {
       ctx.fillText(iteracion.iteracion, 50, 70 + fila * 20);
       ctx.fillText(iteracion.x0, 150, 70 + fila * 20);
       ctx.fillText(iteracion.x1, 250, 70 + fila * 20);
-      ctx.fillText(iteracion.f_x0, 350, 70 + fila * 20);
   });
 
   // Mostrar raíz aproximada
