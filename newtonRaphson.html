@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Método de Newton-Raphson</title>
+    <style type="text/css">
+      html {
+        background-color: #eee;
+      }
+      body {
+        font-family: sans-serif;
+        margin: 0 auto;
+        padding: 0;
+      }
+      canvas {
+        outline: 1px solid lightgray;
+        background-color: #fafafa;
+        display: block; /* Asegura que el canvas sea un bloque */
+        margin: 0 auto; /* Centra el canvas */
+      }
+      input {
+        border: 1px dotted gray;
+        outline: 0;
+        padding: 5px;
+        background-color: #fafafa;
+        color: #222;
+        margin-bottom: 5px;
+      }
+      input:focus {
+        border-style: solid;
+      }
+      input[name="formula"] {
+        width: calc(100% - 160px);
+        box-sizing: border-box;
+      }
+      input[name="agregar"] {
+        width: 75px;
+        box-sizing: border-box;
+        margin: 0;
+        margin-left: 5px;
+      }
+      #contenedor {
+        max-width: 600px;
+        text-align: center;
+        margin: 0 auto; /* Centra el contenedor */
+      }
+      table {
+        margin: 0 auto;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center;">Método de Newton-Raphson</h1>
+    <form style="margin: 0 auto; text-align: center;" autocomplete="off">
+      <input name="formula" id="formula" type="text" placeholder="Ingresa la fórmula (ej. x^2 - 4)" />
+      <input name="derivadaFormula" id="derivadaFormula" type="text" placeholder="Ingresa la derivada" />
+      <input name="valorInicial" id="valorInicial" type="text" placeholder="Ingresa el valor inicial (ej. 1)" />
+      <input name="agregar" value="Calcular" type="button" onclick="calcularNewtonRaphson()" />
+    </form>
+
+    <div id="contenedor">
+      <canvas id="canvas" width="600" height="400"></canvas>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="window.location.href='index.html';">Regresar al inicio</button>
+    </div>
+    <script src="./newtonRaphson.js"></script>
+  </body>
+</html>
